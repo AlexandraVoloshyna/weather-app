@@ -22,6 +22,7 @@ export class UserComponent implements OnInit {
     thunderstorm: [95, 96, 99],
   };
   icon!: string;
+  clicked = false;
 
   constructor(
     private userService: UserService,

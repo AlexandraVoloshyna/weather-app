@@ -11,7 +11,7 @@
       <p>Highest:{{weatherData.highestTemperature}}°C</p> 
       <p>Current:{{weatherData.currentTemperature}}°C</p>
       <p>Lowest:{{weatherData.lowestTemperature}}°C</p>
-        <button type="button" (click)="saveUser()" > Save </button>
+        <button type="button" [disabled]="clicked" (click)="saveUser(); clicked = true;" > Save </button>
     </div>
   </div> 
 
