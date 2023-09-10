@@ -1,0 +1,20 @@
+<div class="user-card">
+   <div class="user-details" *ngIf="user">
+    <img [src]="user.picture.medium" alt="User Image">
+    <h2>{{ user.name.first }} {{ user.name.last }}</h2>
+    <p> {{ user.gender }}</p>
+    <p> {{ user.email }}</p>
+    <p> {{ user.location.city }}, {{ user.location.country }}</p>
+     </div>
+     <div class="weather-details" *ngIf="weatherData">
+      <img [src]="'assets/' + icon + '.png'" alt="Weather Icon">
+      <p>Highest:{{weatherData.highestTemperature}}°C</p> 
+      <p>Current:{{weatherData.currentTemperature}}°C</p>
+      <p>Lowest:{{weatherData.lowestTemperature}}°C</p>
+        <button type="button" (click)="saveUser()" > Save </button>
+    </div>
+  </div> 
+
+
+
+  

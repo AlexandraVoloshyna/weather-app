@@ -1,0 +1,16 @@
+<div class="user-card"  *ngFor="let savedUser of savedUsers">
+    <div class="user-details">
+     <img [src]="savedUser.user.picture.medium" alt="User Image">
+     <h2>{{ savedUser.user.name.first }} {{ savedUser.user.name.last }}</h2>
+     <p> {{ savedUser.user.gender }}</p>
+     <p> {{ savedUser.user.email }}</p>
+     <p> {{ savedUser.user.location.city }}, {{ savedUser.user.location.country }}</p>
+      </div>
+      <div class="weather-details">
+       <img [src]="'assets/' + savedUser.icon + '.png'" alt="Weather Icon">
+       <p>Highest:{{savedUser.weatherData.highestTemperature}}°C</p> 
+      <p>Current:{{savedUser.weatherData.currentTemperature}}°C</p>
+      <p>Lowest:{{savedUser.weatherData.lowestTemperature}}°C</p>
+     </div>
+   </div> 
+ 
