@@ -65,17 +65,14 @@ ul{
     margin: 0 auto;
     gap: 10px;
     margin-bottom: 32px;
+    justify-content: space-between;
+}
+.user-card.saved {
+    
+    justify-content:space-around;
 }
 
-.user-details {
-    flex: 1;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-.weather-details button {
+ button {
     background-color: #2f2f2f;
     color: #fff;
     border-radius: 6px;
@@ -85,35 +82,8 @@ ul{
     transition: background-color 0.5ms;
     align-self: stretch;
 }
-.weather-details button:hover {
+ button:hover {
    background: #6f6e6e;
-}
-
-
-.user-details img {
-    max-width: 100px;
-    border-radius: 50%;
-}
-.user-details p {
-    margin-bottom: 5px;
-}
-
-.weather-details {
-    flex: 1;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    justify-content: space-between;
-    
-}
-.weather-details.saved {
-    justify-content: space-evenly;
-}
-
-.weather-details img {
-    max-width: 50px;
 }
 
 h2 {
@@ -121,11 +91,11 @@ h2 {
     font-size: 20px;
 }
 
-@media (max-width:370px) {
+@media (max-width:444px) {
     .user-card{
         flex-direction: column;
     }
-    .weather-details button {
+    button {
         margin-top: 10px;
     }
 }

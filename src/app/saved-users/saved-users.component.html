@@ -1,16 +1,5 @@
-<div class="user-card"  *ngFor="let savedUser of savedUsers">
-    <div class="user-details">
-     <img [src]="savedUser.user.picture.medium" alt="User Image">
-     <h2>{{ savedUser.user.name.first }} {{ savedUser.user.name.last }}</h2>
-     <p> {{ savedUser.user.gender }}</p>
-     <p> {{ savedUser.user.email }}</p>
-     <p> {{ savedUser.user.location.city }}, {{ savedUser.user.location.country }}</p>
-      </div>
-      <div class="weather-details">
-       <img [src]="'assets/' + savedUser.icon + '.png'" alt="Weather Icon">
-       <p>Highest:{{savedUser.weatherData.highestTemperature}}°C</p> 
-      <p>Current:{{savedUser.weatherData.currentTemperature}}°C</p>
-      <p>Lowest:{{savedUser.weatherData.lowestTemperature}}°C</p>
-     </div>
-   </div> 
+<div class="user-card saved"  *ngFor="let savedUser of savedUsers">
+      <app-user-details  [userIcon]="savedUser.user.picture.medium" [firstName]="savedUser.user.name.first " [lastName]="savedUser.user.name.last" [gender]="savedUser.user.gender" [city]="savedUser.user.location.city" [country]="savedUser.user.location.country" [email]="savedUser.user.email"></app-user-details>
+      <app-weather-details [icon]="savedUser.icon" [current]="savedUser.weatherData.currentTemperature" [highest]="savedUser.weatherData.highestTemperature" [lowest]="savedUser.weatherData.lowestTemperature"></app-weather-details>
+</div> 
  

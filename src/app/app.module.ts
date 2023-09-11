@@ -9,12 +9,16 @@ import { UserService } from './get-user.service';
 import { WeatherService } from './weather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SavedUsersComponent } from './saved-users/saved-users.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     SavedUsersComponent,
+    UserDetailsComponent,
+    WeatherDetailsComponent,
  
   ],
   imports: [
